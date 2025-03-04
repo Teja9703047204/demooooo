@@ -1,0 +1,88 @@
+1. Definition Difference
+Variance measures how far the data values are from the mean, but it squares the differences, making it harder to interpret.
+Standard Deviation is just the square root of variance, so it brings the measurement back to the original units of the data.
+2. Mathematical Difference
+Variance Formula
+Variance
+=
+∑
+(
+𝑥
+𝑖
+−
+𝑥
+ˉ
+)
+2
+𝑛
+−
+1
+(Sample Variance - VAR())
+Variance= 
+n−1
+∑(x 
+i
+​
+ − 
+x
+ˉ
+ ) 
+2
+ 
+​
+ (Sample Variance - VAR())
+Variance
+=
+∑
+(
+𝑥
+𝑖
+−
+𝜇
+)
+2
+𝑁
+(Population Variance - VARP())
+Variance= 
+N
+∑(x 
+i
+​
+ −μ) 
+2
+ 
+​
+ (Population Variance - VARP())
+Standard Deviation Formula
+Standard Deviation
+=
+Variance
+Standard Deviation= 
+Variance
+​
+ 
+So, standard deviation is just the square root of variance.
+
+3. Interpretation Difference
+Variance is in squared units of the original data, which is difficult to interpret.
+Example: If the data is in meters, variance is in square meters (m²).
+Standard deviation is in the same units as the original data, making it easier to understand.
+Example: If the data is in meters, standard deviation is also in meters (m).
+4. Example to Understand Better
+Imagine we have the following test scores:
+Scores: 60, 70, 80, 90, 100
+
+Mean (Average) = 80
+Variance (VAR) = 200
+Standard Deviation (STDEV) = √200 = 14.14
+If we say:
+
+Variance is 200, it means the scores deviate from the mean by 200 square units, which is not intuitive.
+Standard Deviation is 14.14, which means, on average, scores deviate by 14.14 points from the mean, making more sense.
+5. How Tableau Uses Them?
+Variance in Tableau:
+VAR([YourField]) → Sample Variance
+VARP([YourField]) → Population Variance
+Standard Deviation in Tableau:
+STDEV([YourField]) → Sample Standard Deviation
+STDEVP([YourField]) → Population Standard Deviation
